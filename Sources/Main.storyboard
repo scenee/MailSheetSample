@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="asW-q7-1aF">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Jwr-7Y-TlI">
+            <objects>
+                <viewController id="asW-q7-1aF" customClass="MainViewController" customModule="SheetModalSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O2B-IO-RU9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-id-QHG" customClass="MessageView" customModule="SheetModalSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="734" width="375" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebw-gj-BJv">
+                                        <rect key="frame" x="131.66666666666666" y="15.999999999999998" width="111.66666666666666" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ebw-gj-BJv" firstAttribute="top" secondItem="VXL-id-QHG" secondAttribute="top" constant="16" id="Fwk-kC-bcE"/>
+                                    <constraint firstItem="ebw-gj-BJv" firstAttribute="centerX" secondItem="VXL-id-QHG" secondAttribute="centerX" id="Tla-Gx-iwL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yns-MX-TOI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="730"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="93a-bA-roQ">
+                                        <rect key="frame" x="134" y="350" width="107" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYO-f7-M8K">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
+                                                <state key="normal" title="Present a sheet"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="asW-q7-1aF" eventType="touchUpInside" id="734-XB-fBa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="93a-bA-roQ" firstAttribute="centerY" secondItem="Yns-MX-TOI" secondAttribute="centerY" id="Hgk-cb-kPD"/>
+                                    <constraint firstItem="93a-bA-roQ" firstAttribute="centerX" secondItem="Yns-MX-TOI" secondAttribute="centerX" id="aoa-DD-fEp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VXL-id-QHG" firstAttribute="top" secondItem="QoW-hQ-8Ih" secondAttribute="bottom" constant="-44" id="5zx-gn-yL2"/>
+                            <constraint firstItem="QoW-hQ-8Ih" firstAttribute="bottom" secondItem="Yns-MX-TOI" secondAttribute="bottom" constant="48" id="Kw2-nq-Vcd"/>
+                            <constraint firstItem="Yns-MX-TOI" firstAttribute="trailing" secondItem="QoW-hQ-8Ih" secondAttribute="trailing" id="USf-Bj-Z1x"/>
+                            <constraint firstItem="VXL-id-QHG" firstAttribute="trailing" secondItem="QoW-hQ-8Ih" secondAttribute="trailing" id="V2m-VA-Amz"/>
+                            <constraint firstItem="Yns-MX-TOI" firstAttribute="leading" secondItem="QoW-hQ-8Ih" secondAttribute="leading" id="YfO-MM-JrZ"/>
+                            <constraint firstAttribute="bottom" secondItem="VXL-id-QHG" secondAttribute="bottom" constant="-10" id="mQY-fX-qEF"/>
+                            <constraint firstItem="Yns-MX-TOI" firstAttribute="top" secondItem="O2B-IO-RU9" secondAttribute="top" id="rbX-FU-Fyt"/>
+                            <constraint firstItem="VXL-id-QHG" firstAttribute="leading" secondItem="QoW-hQ-8Ih" secondAttribute="leading" id="s02-XS-VJf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QoW-hQ-8Ih"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="Kw2-nq-Vcd" id="ghO-At-A4k"/>
+                        <outlet property="newMessageView" destination="VXL-id-QHG" id="J9c-wR-DvV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDu-GV-0jp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="123"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="TUs-WW-pYz">
+            <objects>
+                <viewController storyboardIdentifier="ModalViewController" id="raa-Nh-6Vq" customClass="ModalViewController" customModule="SheetModalSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecj-H8-d2P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-5h-swZ">
+                                <rect key="frame" x="0.0" y="165.66666666666669" width="375" height="646.33333333333326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The standard Lorem Ipsum passage, used since the 1500s
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+1914 translation by H. Rackham
+
+"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+
+Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+
+1914 translation by H. Rackham
+
+"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+
+The standard Lorem Ipsum passage, used since the 1500s
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+1914 translation by H. Rackham
+
+"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+
+Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+
+1914 translation by H. Rackham
+
+"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</string>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C04-Xb-ybp">
+                                <rect key="frame" x="16" y="60" width="53" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="raa-Nh-6Vq" eventType="touchUpInside" id="Pan-J8-cHw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-xL-O9e">
+                                <rect key="frame" x="16.000000000000014" y="109.00000000000001" width="236.33333333333337" height="40.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61f-kz-pC2">
+                                <rect key="frame" x="310" y="114" width="51" height="31"/>
+                                <connections>
+                                    <action selector="modeChanged:" destination="raa-Nh-6Vq" eventType="valueChanged" id="tee-NJ-QMD"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-8k-Z9M">
+                                <rect key="frame" x="131.66666666666666" y="60.000000000000007" width="111.66666666666666" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IH8-gb-3lv" firstAttribute="trailing" secondItem="Fhb-5h-swZ" secondAttribute="trailing" id="EJa-dD-To4"/>
+                            <constraint firstItem="C04-Xb-ybp" firstAttribute="leading" secondItem="IH8-gb-3lv" secondAttribute="leading" constant="16" id="I4Z-Wv-q7j"/>
+                            <constraint firstItem="C04-Xb-ybp" firstAttribute="top" secondItem="IH8-gb-3lv" secondAttribute="top" constant="16" id="LQe-Ks-DrV"/>
+                            <constraint firstItem="Fhb-5h-swZ" firstAttribute="leading" secondItem="IH8-gb-3lv" secondAttribute="leading" id="LVf-WN-1HU"/>
+                            <constraint firstItem="Ssa-xL-O9e" firstAttribute="leading" secondItem="C04-Xb-ybp" secondAttribute="leading" id="a3e-JP-w42"/>
+                            <constraint firstItem="Ssa-xL-O9e" firstAttribute="top" secondItem="C04-Xb-ybp" secondAttribute="bottom" constant="16" id="eVi-uj-BW7"/>
+                            <constraint firstAttribute="bottom" secondItem="Fhb-5h-swZ" secondAttribute="bottom" id="q4S-FC-aZm"/>
+                            <constraint firstItem="E8q-8k-Z9M" firstAttribute="top" secondItem="IH8-gb-3lv" secondAttribute="top" constant="16" id="rQh-0a-MNp"/>
+                            <constraint firstItem="IH8-gb-3lv" firstAttribute="trailing" secondItem="61f-kz-pC2" secondAttribute="trailing" constant="16" id="trp-9u-2As"/>
+                            <constraint firstItem="Fhb-5h-swZ" firstAttribute="top" secondItem="Ssa-xL-O9e" secondAttribute="bottom" constant="16" id="uHF-ug-7Av"/>
+                            <constraint firstItem="61f-kz-pC2" firstAttribute="centerY" secondItem="Ssa-xL-O9e" secondAttribute="centerY" id="xnX-Vs-f5f"/>
+                            <constraint firstItem="E8q-8k-Z9M" firstAttribute="centerX" secondItem="ecj-H8-d2P" secondAttribute="centerX" id="ze4-aE-zyp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IH8-gb-3lv"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="C04-Xb-ybp" id="4sj-jU-Idv"/>
+                        <outlet property="newMessageLabel" destination="Ssa-xL-O9e" id="8wl-Hp-E74"/>
+                        <outlet property="newMessageSmallLabel" destination="E8q-8k-Z9M" id="UeQ-J4-ex2"/>
+                        <outlet property="switcher" destination="61f-kz-pC2" id="pqe-AT-SKg"/>
+                        <outlet property="textView" destination="Fhb-5h-swZ" id="7O4-2B-ca7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0F-lc-b1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518" y="123"/>
+        </scene>
+    </scenes>
+</document>
